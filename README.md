@@ -1,7 +1,9 @@
 # Socket.io - Typescript
 
 Learning WebSockets with the socket.io wrapper, writing
-a chat app with typescript.
+a chat app with typescript. For now, just to test, it logs
+mouse movement in the browser and passes it to socket.io
+via message.
 
 ## Table of Contents
 
