@@ -1,4 +1,4 @@
-# Sockt.io - Typescript
+# Socket.io - Typescript
 
 Learning WebSockets with the socket.io wrapper, writing
 a chat app with typescript.
