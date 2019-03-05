@@ -1,6 +1,7 @@
-# README Boilerplate
+# Sockt.io - Typescript
 
-A template of README best practices to make your README simple to understand and easy to use.
+Learning WebSockets with the socket.io wrapper, writing
+a chat app with typescript.
 
 ## Table of Contents
 
@@ -11,17 +12,24 @@ A template of README best practices to make your README simple to understand and
 
 ## Installation
 
-Download to your project directory, add `README.md`, and commit:
+Clone this repo and run
 
-```sh
-curl -LO http://git.io/Xy0Chg
-git add README.md
-git commit -m "Use README Boilerplate"
+```
+npm install
 ```
 
 ## Usage
 
-Replace the contents of `README.md` with your project's:
+Compile the app:
+```
+tsc
+```
+Then run:
+ ```
+node index.js
+```
+TODO .....................
+ `README.md` with your project's:
 
 - Name
 - Description
