@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    >
+    <!-- Compiled and minified CSS -->
+    <!-- minify -->
+    <link
+      href="https://unpkg.com/nes.css@2.1.0/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <!-- latest -->
+    <link
+      href="https://unpkg.com/nes.css@latest/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <!-- core style only -->
+    <link
+      href="https://unpkg.com/nes.css/css/nes-core.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    >
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    >
+    <title>Document</title>
+    <style>
+      body {
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    </style>
+  </head>
+
+  <body id="great-container">
+    <h1>socket.io app</h1>
+    <div class="row">
+      <div class="grid-container">
+        <div class="guard">guard</div>
+        <div class="input">
+          <form id="msg-form">
+            <div class="nes-field">
+              <label for="name_field">Your name</label>
+              <input
+                style="float: left"
+                type="text"
+                id="name_field"
+                class="nes-input"
+              >
+            </div>
+            <div style="justify-self: end;
+              align-self: end;">
+              <button
+                class="nes-btn is-primary"
+                type="button"
+                name="field-btn-send-msg"
+                id="field-btn-send-msg"
+              >Send</button>
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="grid-container">
+        <div class="sidebar">
+          <ul>
+            <li>teste</li>
+            <li>teste</li>
+            <li>teste</li>
+            <li>teste</li>
+            <li>teste</li>
+            <li>teste</li>
+            <li>teste</li>
+            <li>teste</li>
+          </ul>
+        </div>
+        <div class="chat-area">chat-area</div>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+
+      let socket = io('http://localhost:3000');
+      socket.on('connect', (c) => { console.log('connected') });
+      socket.on('event', function (data) { });
+      socket.on('disconnect', function () { });
+      document.getElementById("great-container").onmousemove =
+        function (event) { logEvent(event) };
+      function logEvent(e) {
+        console.log('x: ', e.x, 'y: ', e.y);
+        data = {
+          x: e.x,
+          y: e.y
+        }
+        socket.emit('mouse', data);
+      }
+
+
+    </script>
+  </body>
+
+</html>

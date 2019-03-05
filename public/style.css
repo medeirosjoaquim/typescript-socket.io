@@ -1,0 +1,14 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "sidebar chat-area";
+}
+
+.sidebar, .guard { grid-area: sidebar; }
+
+.chat-area, .input { grid-area: chat-area; }
+
+input{
+  max-width: 80%;
+}
