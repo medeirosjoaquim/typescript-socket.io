@@ -85,7 +85,10 @@
             <li>teste</li>
           </ul>
         </div>
-        <div class="chat-area">chat-area</div>
+        <div
+          class="chat-area"
+          id="chat-area"
+        >chat-area</div>
       </div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
@@ -98,12 +101,18 @@
       document.getElementById("great-container").onmousemove =
         function (event) { logEvent(event) };
       function logEvent(e) {
-        console.log('x: ', e.x, 'y: ', e.y);
+        // console.log('x: ', e.x, 'y: ', e.y);
         data = {
           x: e.x,
           y: e.y
         }
         socket.emit('mouse', data);
+        socket.on('mouse', (msg) => {
+          console.log(msg);
+          let coord =
+            document.getElementById("chat-area")
+              .append(`x: ${msg.x} y: ${msg.x}`);
+        });
       }
 
 

@@ -28,7 +28,7 @@ tsc
 ```
 Then run:
  ```
-node index.js
+node .
 ```
 TODO .....................
  `README.md` with your project's:
