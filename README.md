@@ -23,29 +23,21 @@ npm install
 ## Usage
 
 Compile the app:
+
 ```
 tsc
 ```
+
 Then run:
- ```
+
+```
 node .
 ```
-TODO .....................
- `README.md` with your project's:
-
-- Name
-- Description
-- Installation instructions
-- Usage instructions
-- Support instructions
-- Contributing instructions
-
-Feel free to remove any sections that aren't applicable to your project.
 
 ## Support
 
-Please [open an issue](https://github.com/fraction/readme-boilerplate/issues/new) for support.
+Please [open an issue](https://github.com/medeirosjoaquim/typescript-socket.io/issues) for support.
 
 ## Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/fraction/readme-boilerplate/compare/).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/medeirosjoaquim/typescript-socket.io/compare).
