@@ -1,6 +1,6 @@
 import * as express from "express";
 import * as socket from "socket.io";
-
+let connections = [];
 // app setup
 let app = express();
 let server = app.listen(3000,
@@ -13,9 +13,14 @@ let io = socket.listen(server);
 io.on('connection', newConnection)
 
 function newConnection(socket: socket.Socket) {
-  console.log('new connection:', socket.id);
+  connections.push(socket);
+  console.log('new connection %', socket.id)
+  console.log('%s connections:', connections.length);
   socket.on('mouse', mouseMsg);
-
+  socket.on('send message', receiveMsg);
+  function receiveMsg(data: any) {
+    console.log(data);
+  }
   function mouseMsg(data: any) {
     // send the message to all the connected clients
     // except the one that originated the message
